@@ -82,3 +82,25 @@ Only use this script on PDF documents for which you have permission to remove en
 ## License
 
 This project is released under the BSD 3-Clause License. See the `LICENSE` file for full text.
+
+
+## Tests
+
+This repository includes basic pytest tests that create small PDFs (encrypted and unencrypted)
+and verify the behavior of `decrypt_and_save`. To run tests:
+
+```bash
+pip install pytest PyPDF2
+pytest
+```
+
+## Packaging / Installation
+
+This project includes `pyproject.toml` and `setup.cfg` to build and install the package.
+To install locally in editable mode (development):
+
+```bash
+pip install -e .
+```
+
+After installation the CLI entry point `pdf-unlocker` will be available (see `setup.cfg`).
